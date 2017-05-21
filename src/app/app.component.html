@@ -1,13 +1,9 @@
 <div class="counter">
-  <p>
-       <button (click)="decrement()">
-        Decrement
-      </button>
-      <input type="text" [value] = "counter">
-       <button (click)="increment()">
-        Increment
-      </button>
-      <button (click)="loadFlowers()">Load</button>
-      <p>{{flowers.length}} </p>
-
+    <button (click)="decrement()">Dec</button>
+    <input type="text" [value] = "counter">
+    <button (click)="increment()">Inc</button>
+    <button (click)="loadFlowers()">Load</button>
+    <p *ngFor='let value of flowers | slice:0:5'>{{ value.Name | uppercase }}</p>
+    <p><textarea rows="14">{{token.token}}</textarea></p>
+    <p>{{jqueryversion}}</p>    
 </div>
