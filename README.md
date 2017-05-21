@@ -1,5 +1,17 @@
-# Testng
 
+# Installation and creation of a new Angular 2 project
+npm install -g angular-cli
+go to a folder and type
+ng new Testng
+Once finished go inside the Testng folder and type:
+ng serve
+
+Open Atom editor and open the Testng folder
+Install typescript syntax on Atom as follows:
+apm install atom-typescript
+
+
+# Testng
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
 ## Development server

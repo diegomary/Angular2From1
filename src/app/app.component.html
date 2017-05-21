@@ -1,3 +1,13 @@
-<h1>
-  {{title}}
-</h1>
+<div class="counter">
+  <p>
+       <button (click)="decrement()">
+        Decrement
+      </button>
+      <input type="text" [value] = "counter">
+       <button (click)="increment()">
+        Increment
+      </button>
+      <button (click)="loadFlowers()">Load</button>
+      <p>{{flowers.length}} </p>
+
+</div>
