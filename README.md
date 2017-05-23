@@ -1,4 +1,4 @@
-
+﻿
 # Installation and creation of a new Angular 2 project
 npm install -g angular-cli
 go to a folder and type
@@ -9,7 +9,6 @@ ng serve
 Open Atom editor and open the Testng folder
 Install typescript syntax on Atom as follows:
 apm install atom-typescript
-
 
 # Note on Jquery Installation
 First: Install jQuery, the actual library
