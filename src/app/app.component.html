@@ -5,5 +5,6 @@
     <button (click)="loadFlowers()">Load</button>
     <p *ngFor='let value of flowers | slice:0:5'>{{ value.Name | uppercase }}</p>
     <p><textarea rows="14">{{token.token}}</textarea></p>
-    <p>{{jqueryversion}}</p>    
+    <p>{{jqueryversion}}</p>
+    <div id="jwplayercontainer"></div>
 </div>

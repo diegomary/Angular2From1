@@ -6,10 +6,10 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
+      "outDir": "../jwt/public",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico","playList.txt"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -20,7 +20,8 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": ["../node_modules/jquery/dist/jquery.min.js"],
+      "scripts": ["../node_modules/jquery/dist/jquery.min.js",
+                  "../node_modules/@bianjp/jwplayer/dist/jwplayer.js"],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

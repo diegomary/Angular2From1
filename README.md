@@ -24,6 +24,27 @@ Finally: Go to the ./angular-cli.json file at the root of your Angular CLI proje
 After that, jQuery will be available for you as a global variable. You can log jQuery’s version (which is available as jQuery.fn.jquery   or $.fn.jquery) to ensure it’s working brilliantly.
 
 
+#note on Jwplayer Installation
+in order to install Jwplayer first one has to create an account at https://www.jwplayer.com/
+then in the dashboard one has to choose tool and get the licence key.
+
+Thenext step is to install the wrapper via npm at https://github.com/bianjp/jwplayer
+npm install --save @bianjp/jwplayer
+
+then the typings for typescript:
+npm install --save @types/jwplayer
+
+then it is possible to work with Jwplayer
+
+#Add different file type to deployment.
+The "assets" property of angular-cli.json can be configured to include custom files in angular-cli webpack build. So, configure "assets" property value as an array. For example:
+
+"assets": [
+  "assets",
+  "favicon.ico","playList.txt"
+],
+
+
 # Testng
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
