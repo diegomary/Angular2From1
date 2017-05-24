@@ -1,9 +1,9 @@
 // Component
 import { Component,AfterViewInit } from '@angular/core';
-import { FlowerService } from './flowerservice';
+import { FlowerService } from '../../services/flowerservice';
 
 @Component({
-  selector: 'app-root', //The entry point
+  selector: 'app-component', //The entry point
   providers: [FlowerService],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
