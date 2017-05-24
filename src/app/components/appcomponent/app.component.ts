@@ -10,23 +10,23 @@ import { FlowerService } from '../../services/flowerservice';
 })
 export class AppComponent implements AfterViewInit {
   constructor(private flowerservice: FlowerService) {}
+  //ngOnInit() is called right after the directive's data-bound properties have been checked for the first time,
+  // and before any of its children have been checked. It is invoked only once when the directive is instantiated.
+  ngOnInit(){}
+  //ngAfterViewInit() is called after a component's view, and its children's views, are created.
+  // Its a lifecycle hook that is called after a component's view has been fully initialized.(document.ready for the component)
   ngAfterViewInit() {
-    // document ready
-     this.timer = setInterval(() => { // fat arrow lexical scope preserved in typescript like ES6
-        this.flowerservice.authenticate().subscribe(data => this.token = data);
-     }, 3000);
-
-     var playerInstance = jwplayer("jwplayercontainer");
-     playerInstance.setup({
-     "playlist": "playList.txt",   // renamed from json to txt because dmm888.com doesn't like json
-     "height": 326,
-     "width": 580,
-     "key":"G1VjVx3NzbExARB/D0TFxwr4oC3ilweCL/dt3A==",
-     "autostart": false});
-
+    this.flowerservice.authenticate().subscribe(data => this.token = data);
+    var playerInstance = jwplayer("jwplayercontainer");
+    playerInstance.setup({
+    "playlist": "playList.txt",   // renamed from json to txt because dmm888.com doesn't like json
+    "height": 326,
+    "width": 580,
+    "key":"G1VjVx3NzbExARB/D0TFxwr4oC3ilweCL/dt3A==",
+    "autostart": false});
   }
 
-  title = 'app works!';
+  title = 'DM88 component';
   jqueryversion = `This site is using Jquery ${$.fn.jquery}`;
   timer={}
   name = 'David';
@@ -35,6 +35,7 @@ export class AppComponent implements AfterViewInit {
   token = {};
   increment() { this.counter++; }
   decrement() { this.counter--; }
+  refreshToken() { this.flowerservice.authenticate().subscribe(data => this.token = data); }
   loadFlowers() {
       this.flowerservice.getFlowers().subscribe(data => this.flowers = data);
     }

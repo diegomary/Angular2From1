@@ -2,6 +2,7 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { HttpModule } from '@angular/http';
 
 describe('AppComponent', () => {
   beforeEach(() => {
@@ -9,6 +10,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      imports: [HttpModule],
+      providers: []
     });
     TestBed.compileComponents();
   });
@@ -19,10 +22,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'app works!'`, async(() => {
+  it(`should have as title 'DM88 component'`, async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app works!');
+    expect(app.title).toEqual('DM88 component');
   }));
 
 
@@ -37,7 +40,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('app works!');
+    expect(compiled.querySelector('h1').textContent).toContain('DM88 component');
   }));
 
 
