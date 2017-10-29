@@ -22,11 +22,12 @@
       ],
       "scripts": ["../node_modules/jquery/dist/jquery.min.js",
                   "../node_modules/@bianjp/jwplayer/dist/jwplayer.js"],
-      "environments": {
-        "source": "environments/environment.ts",
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
-      }
+     "environmentSource": "environments/environment.ts",
+"environments": {
+  "dev": "environments/environment.ts",
+  "prod": "environments/environment.prod.ts"
+}
+
     }
   ],
   "e2e": {
